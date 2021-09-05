@@ -91,7 +91,7 @@ def search_txt_files(urlpath, queries):
 		# report
 		if matches:
 			print(url)
-			for query, line in matches:
+			for [query, line] in matches:
 				print('\tContains \"%s\": %s' % (query, line))
 	print('Done.')
 
@@ -104,8 +104,8 @@ path3 = 'https://www.quaddicted.com/files/idgames2/quakec/misc/'
 path4 = 'https://www.quaddicted.com/files/idgames2/quakec/teamplay/'
 path5 = 'https://www.quaddicted.com/files/idgames2/quakec/weapons/'
 
-queries = ['reaper', 'warbot', 'bgbot', 'frogbot', 'frikbot',
-	'zeus', 'wisp', 'cujo' 'bot', 'bots']
+queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot',
+			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[,. ]', 'bots[,. ]']
 
 search_txt_files(path, queries)
 

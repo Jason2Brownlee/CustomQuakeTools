@@ -1,0 +1,8 @@
+TODO
+
+Ideas for helpful scripts I may write in the future.
+
+- scan contents of zip files for bots
+- download all files on ftp html page
+- check if any files listed on ftp html page are in a dir or not
+- download all unique files for a webpage on the internet archive
