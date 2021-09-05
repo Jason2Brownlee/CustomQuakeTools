@@ -22,7 +22,9 @@ def list_pak_file(pakpath):
 		print('.' + entry)
 
 # test = '/Users/jasonb/Games/QuakeYouTube/ad/pak0.pak'
-test = '/Users/jasonb/Downloads/awesome/Pak0.pak'
+# test = '/Users/jasonb/Downloads/awesome/Pak0.pak'
+test = '/Users/jasonb/Downloads/wqmodv.8/pak2.pak'
+
 
 # list contents
 list_pak_file(test)

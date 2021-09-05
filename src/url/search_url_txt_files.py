@@ -75,7 +75,7 @@ def get_matches_txt_url(url, queries):
 def search_txt_files(urlpath, queries):
 	print(urlpath)
 	# download html
-	content = download_url(path)
+	content = download_url(urlpath)
 	# get all relative urls
 	rel_links = get_urls_from_html(content)
 	print('.%d files' % (len(rel_links)))
@@ -83,7 +83,7 @@ def search_txt_files(urlpath, queries):
 	rel_links = [a for a in rel_links if a.endswith('.txt')]
 	print('.%d txt files' % (len(rel_links)))
 	# convert relative urls to absolute urls
-	abs_links = rel_to_abs(path, rel_links)
+	abs_links = rel_to_abs(urlpath, rel_links)
 	# download and search each url
 	for url in abs_links:
 		# search contents of the url for queries
@@ -98,7 +98,7 @@ def search_txt_files(urlpath, queries):
 
 
 
-path = 'https://www.quaddicted.com/files/idgames2/quakec/compilations/'
+path1 = 'https://www.quaddicted.com/files/idgames2/quakec/compilations/'
 path2 = 'https://www.quaddicted.com/files/idgames2/quakec/deathmatch/'
 path3 = 'https://www.quaddicted.com/files/idgames2/quakec/misc/'
 path4 = 'https://www.quaddicted.com/files/idgames2/quakec/teamplay/'
@@ -107,6 +107,7 @@ path5 = 'https://www.quaddicted.com/files/idgames2/quakec/weapons/'
 queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot',
 			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[,. ]', 'bots[,. ]']
 
-search_txt_files(path, queries)
+# entry
+search_txt_files(path2, queries)
 
 
