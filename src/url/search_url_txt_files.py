@@ -47,7 +47,7 @@ def rel_to_abs(path, urls):
 
 # report the line of text that contains a query
 def get_line_with_query(txt, query):
-	lines = txt.split()
+	lines = txt.splitlines()
 	for line in lines:
 		if re.search(query, line):
 			return line
@@ -91,23 +91,26 @@ def search_txt_files(urlpath, queries):
 		# report
 		if matches:
 			print(url)
-			for [query, line] in matches:
+			for query, line in matches:
 				print('\tContains \"%s\": %s' % (query, line))
 	print('Done.')
 
 
 
-
+# ftp html pages to search
 path1 = 'https://www.quaddicted.com/files/idgames2/quakec/compilations/'
 path2 = 'https://www.quaddicted.com/files/idgames2/quakec/deathmatch/'
 path3 = 'https://www.quaddicted.com/files/idgames2/quakec/misc/'
 path4 = 'https://www.quaddicted.com/files/idgames2/quakec/teamplay/'
 path5 = 'https://www.quaddicted.com/files/idgames2/quakec/weapons/'
+path6 = 'https://www.quaddicted.com/files/idgames2/quakec/monsters/'
 
-queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot',
+
+# queries to search for
+queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot', 'omicron',
 			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[,. ]', 'bots[,. ]']
 
 # entry
-search_txt_files(path2, queries)
+search_txt_files(path6, queries)
 
 
