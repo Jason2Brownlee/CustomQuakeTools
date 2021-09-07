@@ -42,7 +42,9 @@ def rel_to_abs(path, urls):
         abs_urls.append(absurl)
     return abs_urls
 
-path = 'https://www.quaddicted.com/files/idgames2/quakec/compilations/'
+# path = 'https://www.quaddicted.com/files/idgames2/quakec/compilations/'
+path = 'http://cd.textfiles.com/swextrav8/swextrav8-2/gamapog1/'
+
 
 # download html
 content = download_html(path)
