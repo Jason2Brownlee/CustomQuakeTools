@@ -10,6 +10,8 @@ A collection of custom scripts for working with Quake assets.
 * Script to list all BSP files in all .pak files in a Quake mod directory.
 * Script to list all URLs on an FTP HTML webpage (e.g. /idgames2/quakec/...)
 * Script to search .txt files on a FTP HTML webpage (e.g. /idgames2/quakec/...)
+* Script to list unique URLs for websites on archive.org (wayback machine).
+* Script to download unique URLs for websites on archive.org (wayback machine).
 
 ## References
 
