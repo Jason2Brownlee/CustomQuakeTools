@@ -15,4 +15,4 @@ A collection of custom scripts for working with Quake assets.
 
 * [quake-cli-tools](https://github.com/joshuaskelly/quake-cli-tools/) Command line tools for creating Quake content.
 * [vgio](https://github.com/joshuaskelly/vgio/) File I/O for video games.
-
+* [Wayback CDX Server API](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server)
