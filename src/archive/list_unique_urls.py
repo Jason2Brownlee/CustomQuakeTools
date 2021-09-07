@@ -98,15 +98,16 @@ def report_urls(urls, ext_filters=[]):
 # query = 'http://www.botepidemic.com/fmods/'
 # query = 'http://www.planetquake.com/requiem'
 # query = 'https://www.bluesnews.com/files/patches/bots/'
-query = 'http://sunsite.org.uk/packages/idgames2/planetquake/'
+# query = 'http://sunsite.org.uk/packages/idgames2/planetquake/'
+query = 'http://geocities.com/TimesSquare/Battlefield/2313/'
 
 # perform query
 urls = get_unique_urls(query)
 
 # report results
-# report_urls(urls)
+report_urls(urls)
 
-report_urls(urls, EXT_ZIPS)
+# report_urls(urls, EXT_ZIPS)
 
 
 

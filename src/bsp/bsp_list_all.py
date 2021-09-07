@@ -223,6 +223,8 @@ def print_bsp_list(mod_path, sep='\t', report_author=True):
 
 
 # test
-path = '/Users/jasonb/Games/QuakeYouTube/sm213/'
+# path = '/Users/jasonb/Games/QuakeYouTube/sm213/'
+path = '/Users/jasonb/Games/QuakeYouTube/alkjam/'
+
 
 print_bsp_list(path, '\t', True)
