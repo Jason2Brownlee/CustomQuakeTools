@@ -6,7 +6,6 @@ Ideas for helpful scripts I may write in the future.
 Scripts Ideas
 -------------
 
-- Script to scan contents of all zip files in a directory for keywords (e.g. bots).
 - Script to check if any files listed on FTP HTML page are not in a local directory.
 - Script to automatically take a screenshot from intermission camera in a BSP file.
 

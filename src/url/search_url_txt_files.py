@@ -108,7 +108,7 @@ path6 = 'https://www.quaddicted.com/files/idgames2/quakec/monsters/'
 
 # queries to search for
 queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot', 'omicron',
-			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[,. ]', 'bots[,. ]']
+			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[s,\.\s]']
 
 # entry
 search_txt_files(path6, queries)
