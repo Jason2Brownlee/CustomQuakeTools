@@ -2,7 +2,19 @@ TODO
 
 Ideas for helpful scripts I may write in the future.
 
-- scan contents of zip files for bots
-- check if any files listed on ftp html page are in a dir or not
-- change absolute urls to relative urls when downloading a website from archive.org
-- automatically take a screenshot from intermission camera in maps
+
+Scripts Ideas
+-------------
+
+- Script to scan contents of all zip files in a directory for keywords (e.g. bots).
+- Script to check if any files listed on FTP HTML page are not in a local directory.
+- Script to automatically take a screenshot from intermission camera in a BSP file.
+
+
+Improvements
+------------
+
+- Download files using multiple threads to speed things up.
+- Change absolute urls to relative urls when downloading a website from archive.org
+	- Write a new script to do this?
+
