@@ -46,7 +46,7 @@ def search_contents(filepath, queries):
 			matches = get_matches_txt(archive, name, queries)
 			# report matches
 			if matches:
-				print('>%s' % name)
+				print(' >%s' % name)
 				for query, line in matches:
 					print('\tContains \"%s\": %s' % (query, line))
 
@@ -69,11 +69,14 @@ def search_all_zips(dirpath, queries):
 
 
 # entry
+
+# queries to search for
 queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot', 'omicron',
 			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[s,\.\s]']
 
-
+# dir containing .zip files
 path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/'
-
+# go
 search_all_zips(path, queries)
+
 
