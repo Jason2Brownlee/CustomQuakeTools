@@ -1,4 +1,4 @@
-# search .txt files for keywords in all zips files in a directory
+# search .txt files for keywords in all zips files in a directory (and sub dirs)
 
 import os
 import re
