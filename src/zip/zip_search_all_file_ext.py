@@ -4,19 +4,21 @@ import os
 import zipfile
 
 # list contents of a zip file
-def get_files_with_ext(filepath, query):
-	filelist = list()
+def get_files_with_ext(filepath, queries):
+	matches = list()
 	# open zip file
 	with zipfile.ZipFile(filepath) as f:
-		# enumerate files in
+		# enumerate files in the zip
 		for name in f.namelist():
-			# check for file with extension
-			if name.lower().endswith(query):
-				filelist.append(name)
-	return filelist
+			# enumerate all search queries
+			for query in queries:
+				# check for file with extension
+				if name.lower().endswith(query):
+					matches.append([query, name])
+	return matches
 
 # search all zip files in a directory
-def search_all_zips(dirpath, query):
+def search_all_zips(dirpath, queries):
 	# get a filenames in a dir
 	filelist = [name for name in os.listdir(dirpath)]
 	# sort for readability
@@ -30,27 +32,32 @@ def search_all_zips(dirpath, query):
 		filepath = os.path.join(dirpath, filename)
 		# search contents of zip for matches
 		print('Searching: %s' % filename)
-		result = get_files_with_ext(filepath, query)
+		matches = get_files_with_ext(filepath, queries)
 		# report
-		if result:
-			for value in result:
-				print('\t%s' % value)
+		if matches:
+			for query, name in matches:
+				print('\t%s' % name)
 
 
 
 # dir containing .zip files
 # path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/'
+path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2/'
+
 # path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/reaper/'
 # path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/eliminator/'
 # path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/frogbot/'
 # path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/frikbot/'
-path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/other/'
+# path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/other/'
 
 
-# file or extension to search for
-query = 'progs.dat'
+# search for mods
+# query = ['progs.dat']
+
+# search for archives inside the .zip files
+queries = ['.zip', 'lha', '.rar', '.r01', '.arj', '.a01']
 
 
 # go
-search_all_zips(path, query)
+search_all_zips(path, queries)
 

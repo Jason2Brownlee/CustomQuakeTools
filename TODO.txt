@@ -16,4 +16,4 @@ Improvements
 - Download files using multiple threads to speed things up.
 - Change absolute urls to relative urls when downloading a website from archive.org
 	- Write a new script to do this?
-
+- Support rar and arj files when searching zip files (many bbs archives are .zip around a .arj).

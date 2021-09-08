@@ -100,7 +100,7 @@ def report_urls(urls, ext_filters=[]):
 # query = 'https://www.bluesnews.com/files/patches/bots/'
 # query = 'http://sunsite.org.uk/packages/idgames2/planetquake/'
 # query = 'http://geocities.com/TimesSquare/Battlefield/2313/'
-query = 'http://members.tripod.com/~pluck'
+query = 'http://www.cdrom.com/pub/idgames2/quakec/'
 
 # perform query
 urls = get_unique_urls(query)

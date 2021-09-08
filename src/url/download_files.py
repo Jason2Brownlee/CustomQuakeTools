@@ -82,18 +82,23 @@ def download_urls(urlpath, basepath):
 		# only download some file types
 		if not (filename.endswith('.zip') or filename.endswith('.txt')):
 			continue
-		# reporting
-		print('.downloading %s...' % filename)
 		# construct the output path
 		outpath = os.path.join(basepath, filename)
+		# skip if the file already exists
+		if os.path.isfile(outpath):
+			print('.skipping %s' % filename)
+			continue
 		# download the url to a local file
+		print('.downloading %s...' % filename)
 		download_url_to_file(abs_url, outpath)
 
 # entry point
 
-urlpath = 'http://cd.textfiles.com/swextrav8/swextrav8-2/gamapog1/'
-basepath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1'
+# urlpath = 'http://cd.textfiles.com/swextrav8/swextrav8-2/gamapog1/'
+# basepath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1'
 
+urlpath = 'http://cd.textfiles.com/swextrav8/swextrav8-2/gamapog2/'
+basepath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2'
 
 
 # download all files
