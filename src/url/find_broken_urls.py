@@ -94,8 +94,8 @@ def find_broken_urls(urlpath):
 	# test each link and find broken links
 	broken = find_broken_links(filtered)
 	# report broken
-	print('\n')
-	for url in broke:
+	print('\nBroken URLs:')
+	for url in broken:
 		print(url)
 
 
