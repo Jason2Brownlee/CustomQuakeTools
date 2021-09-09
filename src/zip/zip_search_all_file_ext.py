@@ -17,6 +17,25 @@ def get_files_with_ext(filepath, queries):
 					matches.append([query, name])
 	return matches
 
+# list of all common archive extensions
+def get_archive_ext():
+	# common
+	# archives = ['.zip', '.exe', '.rar', '.arj']
+	archives = ['.zip', '.rar', '.arj']
+	# lesson common
+	archives += ['.bz2', '.z', '.7z', '.ace']
+	# mac
+	archives += ['.lha', '.sit', '.hqx', '.bin', '.dmg']
+	# amiga
+	archives += ['.lha', 'lhz', '.lzx']
+	# posix
+	archives += ['.tar', '.gz', '.tgz']
+	# multi-part arj
+	archives += ['.a0%d' % i for i in range(0,10)]
+	# multi-part rar
+	archives += ['.r0%d' % i for i in range(0,10)]
+	return archives
+
 # search all zip files in a directory
 def search_all_zips(dirpath, queries):
 	# get a filenames in a dir
@@ -31,18 +50,18 @@ def search_all_zips(dirpath, queries):
 		# construct the path
 		filepath = os.path.join(dirpath, filename)
 		# search contents of zip for matches
-		print('Searching: %s' % filename)
 		matches = get_files_with_ext(filepath, queries)
 		# report
 		if matches:
+			print('Searching: %s' % filename)
 			for query, name in matches:
 				print('\t%s' % name)
 
 
 
 # dir containing .zip files
-# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/'
-path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2/'
+path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/'
+# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2/'
 
 # path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/reaper/'
 # path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/eliminator/'
@@ -55,8 +74,7 @@ path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2/'
 # query = ['progs.dat']
 
 # search for archives inside the .zip files
-queries = ['.zip', 'lha', '.rar', '.r01', '.arj', '.a01']
-
+queries = get_archive_ext()
 
 # go
 search_all_zips(path, queries)

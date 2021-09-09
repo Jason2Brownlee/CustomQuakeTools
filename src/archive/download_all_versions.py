@@ -115,8 +115,11 @@ def download_all_versions(query, basepath):
 # entry point
 
 # query
-query = 'http://www.cdrom.com/pub/quake/00alltxt.tar.gz'
+# query = 'http://www.cdrom.com/pub/quake/00alltxt.tar.gz'
 # query = 'http://www.cdrom.com/pub/idgames2/00alltxt.tar.gz'
+# query = 'http://freespace.virgin.net/w.james/DJbot1.zip'
+# query = 'http://ftp.sunet.se/pub/pc/games/idgames2/ls-laR.gz'
+query = 'http://ftp.sunet.se/pub/pc/games/idgames2/ls-laR'
 
 outpath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/archive_file'
 

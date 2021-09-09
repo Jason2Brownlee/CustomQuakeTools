@@ -11,6 +11,7 @@ A collection of custom scripts for working with Quake assets.
 * Script to list all URLs on an FTP HTML webpage (e.g. /idgames2/quakec/...).
 * Script to search TXT files on a FTP HTML webpage (e.g. /idgames2/quakec/...).
 * Script to download all files listed on an FTM HTML webpage (e.g. /idgames2/quakec/...).
+* Script to check for broken links on a webpage.
 * Script to list unique URLs for a website on archive.org (i.e. wayback machine).
 * Script to download unique URLs for a website on archive.org (i.e. wayback machine).
 * Script to download all saved versions of a file on archive.org (i.e. wayback machine).

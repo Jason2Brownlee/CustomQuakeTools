@@ -72,9 +72,25 @@ def get_unique_urls(query):
 	urls_filtered.sort()
 	return urls_filtered
 
+# list of all common archive extensions
+def get_archive_ext():
+	# common
+	archives = ['.zip', '.exe', '.rar', '.arj']
+	# lesson common
+	archives += ['.bz2', '.z', '.7z', '.ace']
+	# mac
+	archives += ['.lha', '.sit', '.hqx', '.bin', '.dmg']
+	# amiga
+	archives += ['.lha', 'lhz', '.lzx']
+	# posix
+	archives += ['.tar', '.gz', '.tgz']
+	# multi-part arj
+	archives += ['.a0%d' % i for i in range(0,10)]
+	# multi-part rar
+	archives += ['.r0%d' % i for i in range(0,10)]
+	return archives
+
 # report unique urls found on a domain
-EXT_ZIPS = ['.zip', '.exe', '.rar', '.arj', '.lha', '.sit', '.hqx', '.bin',
-	'.tar', '.gz', '.tgz', '.txt']
 def report_urls(urls, ext_filters=[]):
 	for url in urls:
 		if ext_filters:
@@ -100,15 +116,25 @@ def report_urls(urls, ext_filters=[]):
 # query = 'https://www.bluesnews.com/files/patches/bots/'
 # query = 'http://sunsite.org.uk/packages/idgames2/planetquake/'
 # query = 'http://geocities.com/TimesSquare/Battlefield/2313/'
-query = 'http://www.cdrom.com/pub/idgames2/quakec/'
+# query = 'http://freespace.virgin.net/w.james/'
+# query = 'http://www.cdrom.com/pub/idgames2/quakec/'
+# query = 'http://www.cdrom.com/pub/'
+# query = 'http://ftp.cdrom.com/pub/idgames2/'
+# query = 'http://www.btinternet.com/~chris.r.millward/'
+query = 'http://welcome.to/deadworld'
 
 # perform query
 urls = get_unique_urls(query)
+ext = []
 
-# report results
-report_urls(urls)
+# report urls with filter
+# ext = get_archive_ext() + ['.txt']
 
-# report_urls(urls, EXT_ZIPS)
+# report all url results
+if ext:
+	report_urls(urls, ext)
+else:
+	report_urls(urls)
 
 
 
