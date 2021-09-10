@@ -93,24 +93,44 @@ def search_txt_files(urlpath, queries):
 			print(url)
 			for query, line in matches:
 				print('\tContains \"%s\": %s' % (query, line))
-	print('Done.')
 
+# search across multiple pages
+def search_txt_files_across_pages(pages, queries):
+	for urlpath in pages:
+		# perform search
+		search_txt_files(urlpath, queries)
+		# separate report from the next
+		print('\n----------' * 8)
+
+
+# list of keywords with bot like names
+def get_bot_keywords():
+	queries = list()
+	# classic bots
+	queries += ['reaper', 'reaprb', 'robot', 'eliminator', 'bgbot', 'zeus', 'cujo']
+	# less common classic bots
+	queries += ['warbot', 'wisp', 'bplayer', 'bgadm', 'btskn', 'darkbt', 'cronosbot']
+	# modern bots
+	queries += ['frogbot', 'omicron', 'frikbot']
+	# generic
+	queries += ['bot[s,\.\s]']
+	return queries
 
 
 # ftp html pages to search
-path1 = 'https://www.quaddicted.com/files/idgames2/quakec/compilations/'
-path2 = 'https://www.quaddicted.com/files/idgames2/quakec/deathmatch/'
-path3 = 'https://www.quaddicted.com/files/idgames2/quakec/misc/'
-path4 = 'https://www.quaddicted.com/files/idgames2/quakec/teamplay/'
-path5 = 'https://www.quaddicted.com/files/idgames2/quakec/weapons/'
-path6 = 'https://www.quaddicted.com/files/idgames2/quakec/monsters/'
+pages = list()
+pages += ['https://www.quaddicted.com/files/idgames2/quakec/compilations/']
+pages += ['https://www.quaddicted.com/files/idgames2/quakec/deathmatch/']
+pages += ['https://www.quaddicted.com/files/idgames2/quakec/misc/']
+pages += ['https://www.quaddicted.com/files/idgames2/quakec/teamplay/']
+pages += ['https://www.quaddicted.com/files/idgames2/quakec/weapons/']
+pages += ['https://www.quaddicted.com/files/idgames2/quakec/monsters/']
 
 
 # queries to search for
-queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot', 'omicron',
-			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[s,\.\s]']
+queries = get_bot_keywords()
 
 # entry
-search_txt_files(path6, queries)
+search_txt_files_across_pages(pages, queries)
 
 

@@ -102,11 +102,23 @@ def search_all_zips(dirpath, queries):
 			# search the .txt file directly
 			search_txt_contents(filepath, queries)
 
+# list of keywords with bot like names
+def get_bot_keywords():
+	queries = list()
+	# classic bots
+	queries += ['reaper', 'reaprb', 'eliminator', 'bgbot', 'zeus', 'cujo']
+	# less common classic bots
+	queries += ['warbot', 'wisp', 'bplayer', 'bgadm', 'btskn', 'darkbt', 'cronosbot']
+	# modern bots
+	queries += ['frogbot', 'omicron', 'frikbot']
+	# generic
+	queries += ['bot[s,\.\s]']
+	return queries
+
 # entry
 
 # queries to search for
-queries = [	'reaper', 'reaprb', 'warbot', 'eliminator', 'bgbot', 'frogbot', 'omicron',
-			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[s,\.\s]']
+queries = get_bot_keywords()
 
 # dir containing .zip files
 # path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/'

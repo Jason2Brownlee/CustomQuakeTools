@@ -44,6 +44,9 @@ def filter_results(url_list):
 		# skip if http return code 3xx 4xx or 5xx
 		if code.startswith('3') or code.startswith('4') or code.startswith('5'):
 			continue
+		# skip robots.txt
+		if url.endswith('/robots.txt'):
+			continue
 		# skip formats like: application/octet-stream, image/jpeg, image/gif, ...
 		# if fmt != 'text/html':
 		# 	continue
@@ -121,14 +124,23 @@ def report_urls(urls, ext_filters=[]):
 # query = 'http://www.cdrom.com/pub/'
 # query = 'http://ftp.cdrom.com/pub/idgames2/'
 # query = 'http://www.btinternet.com/~chris.r.millward/'
-query = 'http://welcome.to/deadworld'
+# query = 'D219-2.ibk.fnt.hvu.nl'
+# query = '*.stomped.com/'
+# query = 'http://www.gocompupro.com/cqf'
+# query = 'http://redwood.gatsbyhouse.com'
+# query = '*.hipnotic.com'
+# query = 'www.ritual.com'
+# query = 'shugarshack.ritual.com'
+# query = 'http://www-home.calumet.yorku.ca/dcardoso'
+# query = 'http://www.kinglink.com/'
+query = 'http://php.ucs.indiana.edu/~abrennan/'
 
 # perform query
 urls = get_unique_urls(query)
 ext = []
 
 # report urls with filter
-# ext = get_archive_ext() + ['.txt']
+ext = get_archive_ext() + ['.txt']
 
 # report all url results
 if ext:
