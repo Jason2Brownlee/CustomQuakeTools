@@ -100,7 +100,8 @@ def search_txt_files_across_pages(pages, queries):
 		# perform search
 		search_txt_files(urlpath, queries)
 		# separate report from the next
-		print('\n----------' * 8)
+		print('\n')
+		print('----------' * 8)
 
 
 # list of keywords with bot like names
