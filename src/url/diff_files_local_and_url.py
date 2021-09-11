@@ -35,7 +35,6 @@ def get_all_files_url(urlpath):
 	# get all urls from the content
 	links = get_urls_from_html(content)
 	# get all files from the
-# TODO make a set to get unique files?
 	all_files = list()
 	for link in links:
 		# retrieve the file path

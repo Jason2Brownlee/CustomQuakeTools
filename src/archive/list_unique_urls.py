@@ -1,10 +1,10 @@
 # list all unique urls captured in the internet archive for a domain or directory
-import urllib.request
+from urllib.request import urlopen
 
 # download a url as blob of data
 def download_html(urlpath):
 	# print(urlpath)
-	with urllib.request.urlopen(urlpath) as f:
+	with urlopen(urlpath) as f:
 		content = f.read()
 		return content
 
@@ -18,11 +18,11 @@ def build_query(query):
 	if query.startswith('ftp://'):
 		query = query.replace('ftp://', '')
 	# remove trailing slash for consistency
-	if query.startswith('/'):
+	if query.endswith('/'):
 		query = query[:-1]
-	# TODO safely?
+	# base for archive.or searches
 	search_url = 'http://web.archive.org/cdx/search/cdx'
-	# assumes url ends with a '/'
+	# construct search url
 	urlpath = "%s?url=%s/*&output=txt" % (search_url, query)
 	return urlpath
 
@@ -42,14 +42,11 @@ def filter_results(url_list):
 		# <internal name> <hash> <url> <format> <return code> <hash> <number>
 		_, _, url, fmt, code, _, _ = entry
 		# skip if http return code 3xx 4xx or 5xx
-		if code.startswith('3') or code.startswith('4') or code.startswith('5'):
+		if code != '200':
 			continue
 		# skip robots.txt
 		if url.endswith('/robots.txt'):
 			continue
-		# skip formats like: application/octet-stream, image/jpeg, image/gif, ...
-		# if fmt != 'text/html':
-		# 	continue
 		# remove port if present
 		if ':80' in url:
 			url = url.replace(':80', '')
@@ -133,14 +130,15 @@ def report_urls(urls, ext_filters=[]):
 # query = 'shugarshack.ritual.com'
 # query = 'http://www-home.calumet.yorku.ca/dcardoso'
 # query = 'http://www.kinglink.com/'
-query = 'http://php.ucs.indiana.edu/~abrennan/'
+# query = 'http://php.ucs.indiana.edu/~abrennan/'
+query = 'http://tki.shrimpwars.be/'
 
 # perform query
 urls = get_unique_urls(query)
 ext = []
 
 # report urls with filter
-ext = get_archive_ext() + ['.txt']
+# ext = get_archive_ext() + ['.txt']
 
 # report all url results
 if ext:
