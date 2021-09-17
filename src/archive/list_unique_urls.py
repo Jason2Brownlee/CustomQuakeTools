@@ -41,6 +41,7 @@ def filter_results(url_list):
 	for entry in url_list:
 		# <internal name> <hash> <url> <format> <return code> <hash> <number>
 		_, _, url, fmt, code, _, _ = entry
+# ???
 		# skip if http return code 3xx 4xx or 5xx
 		if code != '200':
 			continue
@@ -88,6 +89,8 @@ def get_archive_ext():
 	archives += ['.a0%d' % i for i in range(0,10)]
 	# multi-part rar
 	archives += ['.r0%d' % i for i in range(0,10)]
+	# quake stuff
+	archives += ['.qc', 'progs.dat']
 	return archives
 
 # report unique urls found on a domain
@@ -103,42 +106,14 @@ def report_urls(urls, ext_filters=[]):
 # entry point
 
 # query
-# query = 'www.planetquake.com/ramshackle/'
-# query = 'http://www.bluesnews.com'
-# query = 'http://www.parboil.quakeworld.ru'
-# query = 'http://www.parboil.mailru.com'
-# query = 'quakemecca.simplenet.com'
-# query = 'http://sunsite.org.uk/packages/idgames2/planetquake/'
-# query = 'http://trinca.no.sapo.pt/'
-# query = 'http://www.angelfire.com/co2/kooliobot'
-# query = 'http://www.botepidemic.com/fmods/'
-# query = 'http://www.planetquake.com/requiem'
-# query = 'https://www.bluesnews.com/files/patches/bots/'
-# query = 'http://sunsite.org.uk/packages/idgames2/planetquake/'
-# query = 'http://geocities.com/TimesSquare/Battlefield/2313/'
-# query = 'http://freespace.virgin.net/w.james/'
-# query = 'http://www.cdrom.com/pub/idgames2/quakec/'
-# query = 'http://www.cdrom.com/pub/'
-# query = 'http://ftp.cdrom.com/pub/idgames2/'
-# query = 'http://www.btinternet.com/~chris.r.millward/'
-# query = 'D219-2.ibk.fnt.hvu.nl'
-# query = '*.stomped.com/'
-# query = 'http://www.gocompupro.com/cqf'
-# query = 'http://redwood.gatsbyhouse.com'
-# query = '*.hipnotic.com'
-# query = 'www.ritual.com'
-# query = 'shugarshack.ritual.com'
-# query = 'http://www-home.calumet.yorku.ca/dcardoso'
-# query = 'http://www.kinglink.com/'
-# query = 'http://php.ucs.indiana.edu/~abrennan/'
-query = 'http://tki.shrimpwars.be/'
+query = 'http://www.tcnj.edu/~weiden'
 
 # perform query
 urls = get_unique_urls(query)
 ext = []
 
 # report urls with filter
-# ext = get_archive_ext() + ['.txt']
+ext = get_archive_ext() + ['.txt']
 
 # report all url results
 if ext:

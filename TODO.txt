@@ -7,6 +7,7 @@ Scripts Ideas
 -------------
 
 - Script to automatically take a screenshot from intermission camera in a BSP file.
+- Script to automatically search google groups and parse the results.
 
 
 Improvements
