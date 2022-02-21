@@ -106,15 +106,16 @@ def report_urls(urls, ext_filters=[]):
 # entry point
 
 # query
-query = 'http://www.tcnj.edu/~weiden'
+query = 'ftp.epix.net'
+
 
 # perform query
 urls = get_unique_urls(query)
 ext = []
 
 # report urls with filter
-ext = get_archive_ext() + ['.txt']
-
+# ext = get_archive_ext() + ['.txt']
+#
 # report all url results
 if ext:
 	report_urls(urls, ext)
