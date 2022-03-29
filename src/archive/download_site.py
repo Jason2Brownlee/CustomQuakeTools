@@ -12,9 +12,12 @@ import os
 
 # download a url as blob of data
 def download_url(urlpath):
-	with urlopen(urlpath) as f:
-		content = f.read()
-		return content
+	try:
+		with urlopen(urlpath) as f:
+			content = f.read()
+			return content
+	except Exception:
+		return None
 
 # query archive.org
 def build_query(query):
@@ -109,17 +112,24 @@ def download_urls(url_map, basepath):
 		filename = os.path.basename(filepath)
 		# skip files that don't have a filename extension
 		if not '.' in filename:
-			print('. skipping %s' % filepath)
+			print(f'.skipping {filepath} as its not a file')
 			continue
 		# remove leading slash
 		filepath = filepath[1:]
 		# construct the output path
 		outpath = os.path.join(basepath, filepath)
+		# check if the file exists locally
+		if os.path.isfile(outpath):
+			print(f'.skipping {outpath} as it already exists')
+			continue
 		# create any directories if needed
 		directory = os.path.dirname(outpath)
 		os.makedirs(directory, exist_ok=True)
 		# download the bytes
 		data = download_archived_url(url, str(timestamp))
+		if not data:
+			print(f'.error {outpath} could not be downloaded')
+			continue
 		# save to file
 		with open(outpath, 'wb') as f:
 			f.write(data)
@@ -130,8 +140,10 @@ def download_urls(url_map, basepath):
 # entry point
 
 # query
-query = 'www.planetquake.com/ramshackle/'
-outpath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/'
+# query = 'www.planetquake.com/ramshackle/'
+# query = 'www.planetquake.com/qca/'
+query = 'redwood.gatsbyhouse.com'
+outpath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/redwood-gatsbyhouse-com'
 
 # get map of urls to timestamps
 url_map = get_unique_urls(query)

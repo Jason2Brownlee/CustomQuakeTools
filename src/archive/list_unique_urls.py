@@ -2,9 +2,9 @@
 from urllib.request import urlopen
 
 # download a url as blob of data
-def download_html(urlpath):
+def download_html(urlpath, timeout=(60*10)):
 	# print(urlpath)
-	with urlopen(urlpath) as f:
+	with urlopen(urlpath, timeout=timeout) as f:
 		content = f.read()
 		return content
 
@@ -104,23 +104,19 @@ def report_urls(urls, ext_filters=[]):
 			print(url)
 
 # entry point
-
-# query
-query = 'ftp.epix.net'
-
-
-# perform query
-urls = get_unique_urls(query)
-ext = []
-
-# report urls with filter
-# ext = get_archive_ext() + ['.txt']
-#
-# report all url results
-if ext:
-	report_urls(urls, ext)
-else:
-	report_urls(urls)
+if __name__ == '__main__':
+	# query
+	query = 'telefragged.com/epidemic'
+	# perform query
+	urls = get_unique_urls(query)
+	# report urls with filter
+	ext = []
+	# ext = get_archive_ext() + ['.txt']
+	# report all url results
+	if ext:
+		report_urls(urls, ext)
+	else:
+		report_urls(urls)
 
 
 

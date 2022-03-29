@@ -98,7 +98,8 @@ def search_all_zips(dirpath, queries):
 			# all .txt in the zip file
 			search_zip_contents(filepath, queries)
 		# process .txt files in the directory already
-		elif filename.lower().endswith('.txt'):
+		ext = filename.lower()[-4:]
+		if ext in ['.txt', '.htm', 'html', 'shtm']:
 			# search the .txt file directly
 			search_txt_contents(filepath, queries)
 
@@ -121,11 +122,13 @@ def get_bot_keywords():
 queries = get_bot_keywords()
 
 # dir containing .zip files
+# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/ramshackle/'
+path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/qca/'
 # path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/'
 # path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2/'
 # path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/PowerToolsforQuake(Europe)/'
 # path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/ToolkitForQuake(QTool_0197)/'
-path = '/Users/jasonb/Games/QuakeFiles'
+# path = '/Users/jasonb/Games/QuakeFiles'
 
 # go
 search_all_zips(path, queries)
