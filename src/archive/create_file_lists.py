@@ -64,9 +64,9 @@ def process(path_domainlist, path_dir):
 # protect the entry point
 if __name__ == '__main__':
     # path to domain/url wish list
-    path_domainlist = '../../dev/domains.txt'
+    path_domainlist = '../../data/domains.txt'
     # dir to save file list txt files
-    path_dir = '../../dev/lists/'
+    path_dir = '../../data/lists/'
     # process the wishlist
     process(path_domainlist, path_dir)
 

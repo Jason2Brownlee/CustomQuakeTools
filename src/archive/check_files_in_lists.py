@@ -120,6 +120,6 @@ if __name__ == '__main__':
     # file path to a wishlist of urls (one per file)
     url_wishlist = '/Users/jasonb/Development/Quake/QuakeBotArchive/research/wishlist_urls.txt'
     # dir path where .txt files exist, each contains all known files from a domain on internet archive
-    file_lists = '../../dev/lists'
+    file_lists = '../../data/lists'
     # perform search
     doit(file_wishlist, url_wishlist, file_lists)
