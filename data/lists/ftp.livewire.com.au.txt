@@ -1,0 +1,4 @@
+http://ftp.livewire.com.au/
+http://ftp.livewire.com.au/javarc/
+http://ftp.livewire.com.au/pub/aminet/game/role/Files.BBS
+http://ftp.livewire.com.au/pub/aminet/util/misc/Smartass_bin.lha

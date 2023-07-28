@@ -1,0 +1,14 @@
+http://hosted.planetquake.gamespy.com/ctfbot/bugs.html
+http://hosted.planetquake.gamespy.com/ctfbot/download.html
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu/b_1.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu/d_0.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu/d_1.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu/l_1.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu/m_0.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu/n_0.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu\l_0.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu\left.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu\n_0.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu\right.gif
+http://hosted.planetquake.gamespy.com/ctfbot/gifs_menu\ss_0.gif
+http://hosted.planetquake.gamespy.com/ctfbot/links.html

@@ -1,0 +1,5 @@
+http://www.pipo.com/quake/index.bylevel.html
+http://www.pipo.com/quake/index.bymax.html
+http://www.pipo.com/quake/index.byname.html
+http://www.pipo.com/quake/index.byplayer.html
+http://www.pipo.com/quake/newserver.html

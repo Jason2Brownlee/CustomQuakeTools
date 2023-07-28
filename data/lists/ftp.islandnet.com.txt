@@ -1,0 +1,11 @@
+http://ftp.islandnet.com/
+http://ftp.islandnet.com/AHA/aas_inst.exe
+http://ftp.islandnet.com/AHA/agt_inst32.exe
+http://ftp.islandnet.com/AHA/alf_inst.exe
+http://ftp.islandnet.com/AHA/egt_inst.exe
+http://ftp.islandnet.com/AHA/egt_inst32.exe
+http://ftp.islandnet.com/AHA/sms_inst32.exe
+http://ftp.islandnet.com/AHA/xts_inst.exe
+http://ftp.islandnet.com/DataSure/Pioneer/drua124x/macintosh/mac305.sea
+http://ftp.islandnet.com/bedford/mop/zik/
+http://ftp.islandnet.com/cgi-bin/403/ftp.islandnet.com

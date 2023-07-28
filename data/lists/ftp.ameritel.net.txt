@@ -1,0 +1,4 @@
+http://ftp.ameritel.net/
+http://ftp.ameritel.net/icons/blank.xbm
+http://ftp.ameritel.net/icons/menu.xbm
+http://ftp.ameritel.net/mirrors/tucows/files/fwftp.zip

@@ -1,0 +1,13 @@
+http://www.planetquake.com/ctfbot/bugs.html
+http://www.planetquake.com/ctfbot/ctfbot+.txt
+http://www.planetquake.com/ctfbot/ctfbotmw.txt
+http://www.planetquake.com/ctfbot/ctfcoord.txt
+http://www.planetquake.com/ctfbot/download.html
+http://www.planetquake.com/ctfbot/gifs_shots/idmaps.gif
+http://www.planetquake.com/ctfbot/gifs_shots/keys.gif
+http://www.planetquake.com/ctfbot/gifs_shots/player.gif
+http://www.planetquake.com/ctfbot/index.html
+http://www.planetquake.com/ctfbot/links.html
+http://www.planetquake.com/ctfbot/news.html
+http://www.planetquake.com/ctfbot/oldnews.html
+http://www.planetquake.com/ctfbot/shots.html

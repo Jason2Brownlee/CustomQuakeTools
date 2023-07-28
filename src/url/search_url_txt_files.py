@@ -1,6 +1,5 @@
 # search the contents of .txt files for keywords on an ftp html page
 # google typically does not index the contents of these files...
-
 import os
 import re
 import urllib
@@ -103,7 +102,6 @@ def search_txt_files_across_pages(pages, queries):
 		print('\n')
 		print('----------' * 8)
 
-
 # list of keywords with bot like names
 def get_bot_keywords():
 	queries = list()
@@ -117,21 +115,15 @@ def get_bot_keywords():
 	queries += ['bot[s,\.\s]']
 	return queries
 
-
-# ftp html pages to search
-pages = list()
-pages += ['https://www.quaddicted.com/files/idgames2/quakec/compilations/']
-pages += ['https://www.quaddicted.com/files/idgames2/quakec/deathmatch/']
-pages += ['https://www.quaddicted.com/files/idgames2/quakec/misc/']
-pages += ['https://www.quaddicted.com/files/idgames2/quakec/teamplay/']
-pages += ['https://www.quaddicted.com/files/idgames2/quakec/weapons/']
-pages += ['https://www.quaddicted.com/files/idgames2/quakec/monsters/']
-
-
-# queries to search for
-queries = get_bot_keywords()
-
-# entry
-search_txt_files_across_pages(pages, queries)
-
+# protect the entry point
+if __name__ == '__main__':
+	# list of pages of files to consider
+	pages = list()
+	pages += ['https://...']
+	pages += ['https://...']
+	# ...
+	# queries to search for
+	queries = get_bot_keywords()
+	# perform search
+	search_txt_files_across_pages(pages, queries)
 

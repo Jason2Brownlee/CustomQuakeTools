@@ -1,0 +1,8 @@
+http://ftp.cdrom.com/pub/idgames2/levels/deathmatch/j-l/kndybase.txt
+http://ftp.cdrom.com/pub/idgames2/levels/deathmatch/j-l/kndycity.txt
+http://ftp.cdrom.com/pub/idgames2/levels/deathmatch/j-l/kndyforg.txt
+http://ftp.cdrom.com/pub/idgames2/levels/deathmatch/m-o/mncrdrug.txt
+http://ftp.cdrom.com/pub/idgames2/levels/deathmatch/m-o/mncrdrug.zip
+http://ftp.cdrom.com/pub/idgames2/planetquake/qdevels/gfx/dot.gif
+http://ftp.cdrom.com/pub/idgames2/planetquake/qdevels/patchkit.zip
+http://ftp.cdrom.com/pub/idgames2/planetquake/qdevels/q_devc15.zip

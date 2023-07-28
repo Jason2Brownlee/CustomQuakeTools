@@ -1,4 +1,4 @@
-# download all versions of a file from the internet archive
+# download all versions of a file (or files) from the internet archive
 from urllib.request import urlopen
 from urllib.parse import urlparse
 import os
@@ -97,6 +97,9 @@ def download_all_versions(query, basepath):
 		filepath = urlparse(url).path
 		# get the filename
 		filename = os.path.basename(filepath)
+		if not filename:
+			last_part = filepath.split('/')[-2]
+			filename = f'{last_part}_index.html'
 		# prefix filename with timestamp
 		filename = '%s_%s' % (timestamp, filename)
 		# remove leading slash from path
@@ -110,20 +113,66 @@ def download_all_versions(query, basepath):
 		# report
 		print('Saved: %s' % filename)
 
-
-
 # entry point
-
-# query
-# query = 'http://www.cdrom.com/pub/quake/00alltxt.tar.gz'
-# query = 'http://www.cdrom.com/pub/idgames2/00alltxt.tar.gz'
-# query = 'http://freespace.virgin.net/w.james/DJbot1.zip'
-# query = 'http://ftp.sunet.se/pub/pc/games/idgames2/ls-laR.gz'
-query = 'http://ftp.sunet.se/pub/pc/games/idgames2/ls-laR'
-
-outpath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/archive_file'
-
-# download all versions of a file from archive.org
-download_all_versions(query, outpath)
-
-
+if __name__ == '__main__':
+	# local output path
+	outpath = ''
+	# the website host and path to consider, no http:// prefix
+	# e.g. an http page for an ftp site
+	host = '...'
+	# all of the urls to download
+	# this list are all the places where we might find info about quake bots
+	urls = [
+	# quake archive
+		host + 'idgames2/quakec/bots',
+		host + 'idgames2/incoming',
+		host + 'idgames2/newstuff',
+		host + 'idgames2/00alltxt.tar.gz',
+		host + 'idgames2/00find.gz',
+		host + 'idgames2/CHANGES',
+		host + 'idgames2/LAST.24hours',
+		host + 'idgames2/LAST.7days',
+		host + 'idgames2/ls-laR.gz',
+	# planet quake
+		host + 'idgames2/planetquake',
+		host + 'idgames2/planetquake/botarea51',
+		host + 'idgames2/planetquake/botshop',
+		host + 'idgames2/planetquake/cronos',
+		host + 'idgames2/planetquake/ctfbot',
+		host + 'idgames2/planetquake/eliminator',
+		host + 'idgames2/planetquake/holywars',
+		host + 'idgames2/planetquake/minion',
+		host + 'idgames2/planetquake/ramshackle',
+		host + 'idgames2/planetquake/skorpion',
+		host + 'idgames2/planetquake/tfbot',
+	# alt
+		host + 'planetquake',
+		host + 'planetquake/botarea51',
+		host + 'planetquake/botshop',
+		host + 'planetquake/cronos',
+		host + 'planetquake/ctfbot',
+		host + 'planetquake/eliminator',
+		host + 'planetquake/holywars',
+		host + 'planetquake/minion',
+		host + 'planetquake/ramshackle',
+		host + 'planetquake/skorpion',
+		host + 'planetquake/tfbot',
+	# telefragged
+		host + 'idgames2/telefragged/be',
+		host + 'idgames2/telefragged/epidemic',
+		host + 'idgames2/telefragged/inside3d',
+		host + 'idgames2/telefragged/mdqnet',
+		host + 'idgames2/telefragged/metro',
+		host + 'idgames2/telefragged/swtc',
+	# alt
+		host + 'telefragged/be',
+		host + 'telefragged/epidemic',
+		host + 'telefragged/inside3d',
+		host + 'telefragged/mdqnet',
+		host + 'telefragged/metro',
+		host + 'telefragged/swtc',
+	]
+	# download them all
+	for query in urls:
+		# download all versions of a file from archive.org
+		download_all_versions(query, outpath)

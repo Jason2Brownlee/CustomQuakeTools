@@ -1,0 +1,13 @@
+http://ufrclan.free.fr/
+http://ufrclan.free.fr/colone.php3?author=Mineur
+http://ufrclan.free.fr/colone.php3?author=Zemp
+http://ufrclan.free.fr/qw/
+http://ufrclan.free.fr/qw/?D=D
+http://ufrclan.free.fr/qw/?N=A
+http://ufrclan.free.fr/qw/?N=D
+http://ufrclan.free.fr/qw/?S=A
+http://ufrclan.free.fr/qw/Zemp.cfg
+http://ufrclan.free.fr/qw/quake.EXE
+http://ufrclan.free.fr/qw/readme.txt
+http://ufrclan.free.fr/qw/test/
+http://ufrclan.free.fr/qw/zdx.txt

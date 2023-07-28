@@ -1,5 +1,5 @@
 # search .txt files for keywords in all zips files in a directory (and sub dirs)
-
+# TODO add support to search zips within zips
 import os
 import re
 import zipfile
@@ -57,15 +57,15 @@ def search_zip_contents(filepath, queries):
 				# only consider .txt files
 				if not name.lower().endswith('.txt'):
 					continue
-				# matches = get_matches_txt(archive, name, queries)
-				with zfile.open(filename) as file:
+				with archive.open(name) as file:
 					# read contents
 					content = file.read()
 				# decode txt
 				txt = content.decode('utf-8', errors='ignore')
 				# report matches
 				report_matches_txt(txt, filepath, queries)
-	except:
+	except Exception as e:
+		print(e)
 		# just ignore
 		return
 
@@ -89,6 +89,7 @@ def search_all_zips(dirpath, queries):
 	for filename in filelist:
 		# construct the path
 		filepath = os.path.join(dirpath, filename)
+		# print(filepath)
 		# check for directory
 		if os.path.isdir(filepath):
 			# process recursively
@@ -116,21 +117,11 @@ def get_bot_keywords():
 	queries += ['bot[s,\.\s]']
 	return queries
 
-# entry
-
-# queries to search for
-queries = get_bot_keywords()
-
-# dir containing .zip files
-# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/ramshackle/'
-path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/qca/'
-# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/'
-# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2/'
-# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/PowerToolsforQuake(Europe)/'
-# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/ToolkitForQuake(QTool_0197)/'
-# path = '/Users/jasonb/Games/QuakeFiles'
-
-# go
-search_all_zips(path, queries)
-
-
+# protect the entry point
+if __name__ == '__main__':
+	# tokens to search for
+	queries = get_bot_keywords()
+	# path that contains txt files to search
+	path = '...'
+	# perform the search
+	search_all_zips(path, queries)

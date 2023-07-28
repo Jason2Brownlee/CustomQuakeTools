@@ -1,0 +1,4 @@
+http://parboil.tripod.com/
+http://parboil.tripod.com/adm/ad/common_scripts.js
+http://parboil.tripod.com/adm/img/popup/tripodsm.gif
+http://parboil.tripod.com/bin/email_when_updated/display_form

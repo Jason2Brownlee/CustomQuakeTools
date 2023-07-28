@@ -1,5 +1,4 @@
 # search .txt files in a zip file for keywords
-
 import os
 import re
 import zipfile
@@ -52,13 +51,12 @@ def search_contents(filepath, queries):
 					print('\tContains \"%s\": %s' % (query, line))
 	print('Done.')
 
-
-# entry
-queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot', 'omicron',
-			'frikbot', 'zeus', 'wisp', 'cujo', 'bot[,. ]', 'bots[,. ]']
-
-
-path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/bgbot16.zip'
-
-search_contents(path, queries)
-
+# protect the entry point
+if __name__ == '__main__':
+	# tokens to search for
+	queries = [	'reaper', 'warbot', 'eliminator', 'bgbot', 'frogbot', 'omicron',
+				'frikbot', 'zeus', 'wisp', 'cujo', 'bot[,. ]', 'bots[,. ]']
+	# path to zip file to search
+	path = '...'
+	# perform the search
+	search_contents(path, queries)

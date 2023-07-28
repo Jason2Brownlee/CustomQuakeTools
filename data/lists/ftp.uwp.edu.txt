@@ -1,0 +1,9 @@
+http://ftp.uwp.edu
+http://ftp.uwp.edu/images/blendbar.jpg
+http://ftp.uwp.edu/images/glogo.jpg
+http://ftp.uwp.edu/images/glogo2.png
+http://ftp.uwp.edu/images/go-button-gateway.gif
+http://ftp.uwp.edu/images/petabox-header.png
+http://ftp.uwp.edu/includes/wayback404.css
+http://ftp.uwp.edu/includes/wayback404.js
+http://ftp.uwp.edu/stylesheets/archive.css?v=53045

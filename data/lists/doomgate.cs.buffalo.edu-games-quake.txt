@@ -1,0 +1,12 @@
+http://doomgate.cs.buffalo.edu/games/quake/screens.html
+http://doomgate.cs.buffalo.edu/games/quake/screens/q10.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/q11.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/q12.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/q14.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/q3.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/q4.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/q5.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/q6.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/qe1m5-a.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/qe1m5-b.gif
+http://doomgate.cs.buffalo.edu/games/quake/screens/qe1m5-d.gif

@@ -1,5 +1,4 @@
 # search the contents of all zip files in a dir for files with a given extension
-
 import os
 import zipfile
 
@@ -57,25 +56,11 @@ def search_all_zips(dirpath, queries):
 			for query, name in matches:
 				print('\t%s' % name)
 
-
-
-# dir containing .zip files
-path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1/'
-# path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2/'
-
-# path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/reaper/'
-# path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/eliminator/'
-# path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/frogbot/'
-# path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/frikbot/'
-# path = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/other/'
-
-
-# search for mods
-# query = ['progs.dat']
-
-# search for archives inside the .zip files
-queries = get_archive_ext()
-
-# go
-search_all_zips(path, queries)
-
+# protect the entry point
+if __name__ == '__main__':
+	# path to directory of zip files
+	path = '...'
+	# extensions of files to search for within zip files
+	queries = get_archive_ext()
+	# perform search
+	search_all_zips(path, queries)

@@ -1,0 +1,6 @@
+http://ftp.splatterworld.de/
+http://ftp.splatterworld.de/?D=A
+http://ftp.splatterworld.de/?M=A
+http://ftp.splatterworld.de/?N=D
+http://ftp.splatterworld.de/?S=A
+http://ftp.splatterworld.de/?S=D

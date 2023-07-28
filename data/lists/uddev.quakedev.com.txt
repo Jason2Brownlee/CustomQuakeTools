@@ -1,0 +1,15 @@
+http://uddev.quakedev.com/
+http://uddev.quakedev.com/banner.jpg
+http://uddev.quakedev.com/darkplaces.zip
+http://uddev.quakedev.com/hyperdrive110.zip
+http://uddev.quakedev.com/pldocs.txt
+http://uddev.quakedev.com/s01.jpg
+http://uddev.quakedev.com/s02.jpg
+http://uddev.quakedev.com/s03.jpg
+http://uddev.quakedev.com/s04.jpg
+http://uddev.quakedev.com/screenshots.htm
+http://uddev.quakedev.com/trolls.htm
+http://uddev.quakedev.com/ud202.zip
+http://uddev.quakedev.com/ud203.zip
+http://uddev.quakedev.com/ud300.zip
+http://uddev.quakedev.com/wc-02.gif

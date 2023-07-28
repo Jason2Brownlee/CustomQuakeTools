@@ -1,5 +1,4 @@
 # report the worldspawn entity in a bsp file
-
 import re
 from vgio.quake.bsp import Bsp
 
@@ -45,11 +44,12 @@ def load_bsp_worldspawn(filepath):
 		worldspawn = get_worldspawn_entity(entities)
 		return worldspawn
 
-
-
-path = '/Users/jasonb/Games/QuakeYouTube/func_mapjamx/maps/jamx_artistical.bsp'
-# load worldspawn
-ws = load_bsp_worldspawn(path)
-# print somewhat nicely
-for name, value in ws.items():
-	print('%s:\t\t%s' % (name, value))
+# protect the entry point
+if __name__ == '__main__':
+	# path to quake bsp file
+	path = '...'
+	# load worldspawn entity
+	ws = load_bsp_worldspawn(path)
+	# print somewhat nicely
+	for name, value in ws.items():
+		print('%s:\t\t%s' % (name, value))

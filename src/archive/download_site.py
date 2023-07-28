@@ -1,11 +1,5 @@
-# download all files for a website from archive.org
-
-# notes:
-# uses HTTP API
+# download all files for a website via  archive.org
 # only considers files with a 200 HTTP response code
-# saves all files
-
-
 from urllib.request import urlopen
 from urllib.parse import urlparse
 import os
@@ -136,18 +130,13 @@ def download_urls(url_map, basepath):
 		# reporting
 		print(filepath)
 
-
-# entry point
-
-# query
-# query = 'www.planetquake.com/ramshackle/'
-# query = 'www.planetquake.com/qca/'
-query = 'redwood.gatsbyhouse.com'
-outpath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/redwood-gatsbyhouse-com'
-
-# get map of urls to timestamps
-url_map = get_unique_urls(query)
-# download the unique files
-download_urls(url_map, outpath)
-
-
+# protect the entry point
+if __name__ == '__main__':
+	# url of website we are downloading (no http:// prefix)
+	query = '...'
+	# local path where we want to save the files
+	outpath = '...'
+	# get map of urls to timestamps
+	url_map = get_unique_urls(query)
+	# download the unique files
+	download_urls(url_map, outpath)

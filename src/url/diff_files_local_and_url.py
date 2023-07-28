@@ -1,6 +1,5 @@
 # find all files listed on a website that are not in a local directory
 # (or the reverse)
-
 import os
 from urllib.request import urlopen
 from urllib.parse import urlparse
@@ -48,8 +47,6 @@ def get_all_files_url(urlpath):
 			continue
 		if not filename[-4] == '.':
 			continue
-# TODO filter filenames more?
-		# print(filename)
 		# store
 		all_files.append(filename)
 	return all_files
@@ -95,21 +92,12 @@ def diff_files(path1, path2):
 	for name in diff:
 		print(name)
 
-
-# entry point
-
-# path1 = 'https://www.quaddicted.com/files/idgames2/quakec/bots/'
-# path2 = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/'
-
-# path1 = 'https://www.quaddicted.com/files/idgames2/quakec/bots/reaper/'
-# path2 = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/reaper/'
-
-# path1 = 'https://www.quaddicted.com/files/idgames2/quakec/bots/eliminator/'
-# path2 = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/eliminator/'
-
-path1 = 'https://github.com/Jason2Brownlee/QuakeBotArchive/blob/main/README.md'
-path2 = '/Users/jasonb/Development/Quake/QuakeBotArchive/bin/'
-
-# do it
-diff_files(path1, path2)
+# protect the entry point
+if __name__ == '__main__':
+	# website containing linked files
+	website = 'https://...'
+	# directory containing local files
+	path = '...'
+	# perform the diff
+	diff_files(website, path)
 

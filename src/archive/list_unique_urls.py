@@ -41,7 +41,6 @@ def filter_results(url_list):
 	for entry in url_list:
 		# <internal name> <hash> <url> <format> <return code> <hash> <number>
 		_, _, url, fmt, code, _, _ = entry
-# ???
 		# skip if http return code 3xx 4xx or 5xx
 		if code != '200':
 			continue
@@ -103,19 +102,22 @@ def report_urls(urls, ext_filters=[]):
 		else:
 			print(url)
 
-# entry point
+# protect the entry point
 if __name__ == '__main__':
-	# query
-	query = 'telefragged.com/epidemic'
-	# perform query
+	# website to query, does not need https:// prefix
+	query = '...'
+	# perform query (the slow part...)
 	urls = get_unique_urls(query)
-	# report urls with filter
+	# define a filter on urls to report, e.g. all .zip or all .txt
+	# or no filter
 	ext = []
 	# ext = get_archive_ext() + ['.txt']
-	# report all url results
+	# check if a filter was defined
 	if ext:
+		# report all urls with the filter
 		report_urls(urls, ext)
 	else:
+		# report all urls without the filter
 		report_urls(urls)
 
 

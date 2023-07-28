@@ -1,0 +1,7 @@
+http://homepages.ihug.co.nz/usersdirs/howellg/bin/
+http://homepages.ihug.co.nz/usersdirs/howellg/dev/
+http://homepages.ihug.co.nz/usersdirs/howellg/public_html/
+http://homepages.ihug.co.nz/usersdirs/howellg/public_html/main.html
+http://homepages.ihug.co.nz/usersdirs/howellg/public_html/na.html
+http://homepages.ihug.co.nz/usersdirs/howellg/public_html/pics/images.html
+http://homepages.ihug.co.nz/usersdirs/howellg/public_html/stories/stories.html

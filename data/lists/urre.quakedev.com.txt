@@ -1,0 +1,11 @@
+http://urre.quakedev.com/
+http://urre.quakedev.com/favicon.ico
+http://urre.quakedev.com/spcscr.map
+http://urre.quakedev.com/spcscr_test1.pk3
+http://urre.quakedev.com/stuff/bombcar.png
+http://urre.quakedev.com/stuff/modelview.jpg
+http://urre.quakedev.com/stuff/modelview20050708.rar
+http://urre.quakedev.com/stuff/spcscr.map
+http://urre.quakedev.com/stuff/spcscr_test1.pk3
+http://urre.quakedev.com/stuff/spcwad.wad
+http://urre.quakedev.com/twigbox.jpg

@@ -1,0 +1,10 @@
+http://ftp2.3ddownloads.com/
+http://ftp2.3ddownloads.com/?D=A
+http://ftp2.3ddownloads.com/?D=D
+http://ftp2.3ddownloads.com/?M=A
+http://ftp2.3ddownloads.com/?M=D
+http://ftp2.3ddownloads.com/?N=A
+http://ftp2.3ddownloads.com/?S=A
+http://ftp2.3ddownloads.com/?S=D
+http://ftp2.3ddownloads.com/icons/back.gif
+http://ftp2.3ddownloads.com/icons/blank.gif

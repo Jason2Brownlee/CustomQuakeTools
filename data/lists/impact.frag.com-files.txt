@@ -1,0 +1,13 @@
+http://impact.frag.com/files/BrawnStory.txt
+http://impact.frag.com/files/EraserReadme.txt
+http://impact.frag.com/files/EraserTodo.txt
+http://impact.frag.com/files/Morbo.txt
+http://impact.frag.com/files/MorboStory.txt
+http://impact.frag.com/files/SumaGuardCTF.zip
+http://impact.frag.com/files/TCP_IP.zip
+http://impact.frag.com/files/g_turret.c
+http://impact.frag.com/files/ikdm1_dem.zip
+http://impact.frag.com/files/leftovers.txt
+http://impact.frag.com/files/readme.txt
+http://impact.frag.com/files/zumlin.txt
+http://impact.frag.com/files/zumlinstory.txt

@@ -1,4 +1,11 @@
-# read a wishlist of urls, search for all files on archive.org for each and save in a .txt file.
+# List all known urls on a domain captured by the internet archive.
+#
+# 1. read a file containing a list of domains/urls
+# 2. query each domain/url on the internet archive to get a list of captured urls
+# 3. store the results for each in a unique file
+#
+# Stored .txt files are used in "check_files_in_lists.py"
+#
 from os import listdir
 from os.path import join
 from list_unique_urls import get_unique_urls
@@ -54,15 +61,13 @@ def process(path_domainlist, path_dir):
         # always save results, to avoid duplicating queries
         save_results(results, domain, path_dir)
 
+# protect the entry point
 if __name__ == '__main__':
-    # domain wish list
-    path_domainlist = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/domains.txt'
+    # path to domain/url wish list
+    path_domainlist = '../../dev/domains.txt'
     # dir to save file list txt files
-    path_dir = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/lists/'
+    path_dir = '../../dev/lists/'
     # process the wishlist
     process(path_domainlist, path_dir)
-
-
-# TODO use threads
 
 

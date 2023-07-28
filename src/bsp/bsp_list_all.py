@@ -1,5 +1,4 @@
-# program to list all maps in a quake mod directory (maps/ and .pak files)
-
+# list all maps in a quake mod directory (maps/ and .pak files)
 import os
 import sys
 import re
@@ -221,9 +220,9 @@ def print_bsp_list(mod_path, sep='\t', report_author=True):
     for entry in bsplist:
         print(sep.join(entry))
 
-
-# test
-path = '/Users/jasonb/Games/QuakeYouTube/sm212/'
-
-
-print_bsp_list(path, '\t', True)
+# protect the entry point
+if __name__ == '__main__':
+    # path to mod directory
+    path = '...'
+    # report all maps in mod directory
+    print_bsp_list(path, '\t', True)

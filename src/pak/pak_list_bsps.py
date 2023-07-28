@@ -1,5 +1,4 @@
-# list all bsp files in all Quake pak files in a mod directory
-
+# list all maps (bps) files in all pak files in a mod directory
 import os
 from vgio.quake.pak import PakFile
 
@@ -53,7 +52,9 @@ def report_all_bsps_in_all_paks(modpath):
 		for bsp in bsps:
 			print('\t%s' % bsp)
 
-
-path = '/Users/jasonb/Games/QuakeYouTube/ad/'
-# list contents
-report_all_bsps_in_all_paks(path)
+# protect the entry point
+if __name__ == '__main__':
+    # path to mod directory
+    path = '...'
+    # list all map files in pak files
+    report_all_bsps_in_all_paks(path)

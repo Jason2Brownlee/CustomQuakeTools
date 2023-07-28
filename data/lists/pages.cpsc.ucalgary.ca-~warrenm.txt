@@ -1,0 +1,15 @@
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/index.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/interim-report.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/blank.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/bottom.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/left-top.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/main.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/menu-left.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/menu-right.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/menu.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/presentation.css
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/right-bottom.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/right-top.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/presentation/right.html
+http://pages.cpsc.ucalgary.ca/~warrenm/bass/source-code.html

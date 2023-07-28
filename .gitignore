@@ -1,2 +1,17 @@
+# gitignore
+
+# ignore ongoing dev and tmp files
 dev
+
+# ignore mac thing
 .DS_Store
+# ignore python cache
+**/*/__pycache__
+
+# exclude files too large to commit
+
+# 370.21 MB
+data/lists/cd.textfiles.com-crawl.txt
+# 275.74 MB
+data/lists/retroarchive.org-crawled.txt
+

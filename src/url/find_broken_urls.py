@@ -1,5 +1,4 @@
 # find all broken urls on a webpage
-
 import os
 from urllib.request import urlopen
 from urllib.parse import urljoin
@@ -17,7 +16,7 @@ def get_urls_from_html(content):
     # decode the content
     html = content.decode('utf-8')
     # parse the doc
-    soup = BeautifulSoup(html, features="lxml")
+    soup = BeautifulSoup(html, features='html.parser')
     # find all a tags
     atags = soup.find_all('a')
     # extract links
@@ -47,12 +46,9 @@ def rel_to_abs(path, urls):
     return abs_urls
 
 # filter urls
-# XXX customize...
-def filter_urls(urls):
+def filter_urls(urls, expected):
 	filtered = list()
 	for url in urls:
-		# expect this string to be in the path
-		expected = '/Jason2Brownlee/QuakeBotArchive/blob/main/bin/'
 		if expected not in url:
 			continue
 		# expect the url to be a file, like .txt or .zip
@@ -81,7 +77,7 @@ def find_broken_links(urls):
 	return broken
 
 # find and report all broken urls on a webpage
-def find_broken_urls(urlpath):
+def find_broken_urls(urlpath, prefix):
 	print(urlpath)
 	# download webpage
 	data = download_url(urlpath)
@@ -90,7 +86,7 @@ def find_broken_urls(urlpath):
 	# convert any relative links into absolute links
 	abs_links = rel_to_abs(urlpath, links)
 	# filter urls
-	filtered = filter_urls(abs_links)
+	filtered = filter_urls(abs_links, prefix)
 	# test each link and find broken links
 	broken = find_broken_links(filtered)
 	# report broken
@@ -98,14 +94,12 @@ def find_broken_urls(urlpath):
 	for url in broken:
 		print(url)
 
-
-# entry point
-
-
-urlpath = 'https://github.com/Jason2Brownlee/QuakeBotArchive/blob/main/README.md'
-
-
-# download all files
-find_broken_urls(urlpath)
-
-
+# protect the entry point
+if __name__ == '__main__':
+	# url to consider
+	urlpath = 'https://...'
+	# only consider urls with this prefix
+	# because we only care about broken links to local files
+	prefix = 'https://'
+	# find broken urls
+	find_broken_urls(urlpath, prefix)

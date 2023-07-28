@@ -1,0 +1,6 @@
+https://lost-contact.mit.edu/afs/pdc.kth.se/home/j/joda/src/quake/
+https://lost-contact.mit.edu/afs/pdc.kth.se/home/j/joda/src/quake/quake101.zip
+https://lost-contact.mit.edu/afs/pdc.kth.se/home/j/joda/src/quake/readme.txt
+https://lost-contact.mit.edu/afs/pdc.kth.se/roots/ilse/v0.7/pdc/vol/mesa/9.2.5/src/Mesa-9.2.5/docs/vmware-guest.html
+https://lost-contact.mit.edu/afs/pdc.kth.se/roots/ilse/v0/pdc/vol/matlab/r2016a/help/examples/fuzzy_featured/xxinvkine_gui.png
+https://lost-contact.mit.edu/afs/pdc.kth.se/roots/ilse/v0/pdc/vol/slurm/17.02.10/share/doc/slurm-17.02.10/html/entities.gif

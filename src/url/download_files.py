@@ -1,7 +1,4 @@
 # download all files listed on an FTP HTML website
-
-# sudo pip search wget
-
 import os
 from urllib.request import urlopen
 from urllib.parse import urlparse
@@ -10,9 +7,13 @@ import wget
 
 # download a url as blob of data
 def download_url(urlpath):
-	with urlopen(urlpath) as f:
-		content = f.read()
-		return content
+	try:
+		with urlopen(urlpath) as f:
+			content = f.read()
+			return content
+	except Exception as e:
+		print(e)
+		return None
 
 # download url to file directly (faster? fewer lines of code?)
 def download_url_to_file(url, path):
@@ -31,7 +32,7 @@ def get_urls_from_html(content):
     # decode the content
     html = content.decode('utf-8')
     # parse the doc
-    soup = BeautifulSoup(html, features="lxml")
+    soup = BeautifulSoup(html)
     # find all a tags
     atags = soup.find_all('a')
     # extract links
@@ -80,8 +81,8 @@ def download_urls(urlpath, basepath):
 		# convert to lower case
 		filename = filename.lower()
 		# only download some file types
-		if not (filename.endswith('.zip') or filename.endswith('.txt')):
-			continue
+		# if not (filename.endswith('.zip') or filename.endswith('.txt')):
+		# 	continue
 		# construct the output path
 		outpath = os.path.join(basepath, filename)
 		# skip if the file already exists
@@ -92,16 +93,12 @@ def download_urls(urlpath, basepath):
 		print('.downloading %s...' % filename)
 		download_url_to_file(abs_url, outpath)
 
-# entry point
-
-# urlpath = 'http://cd.textfiles.com/swextrav8/swextrav8-2/gamapog1/'
-# basepath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog1'
-
-urlpath = 'http://cd.textfiles.com/swextrav8/swextrav8-2/gamapog2/'
-basepath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/gamapog2'
-
-
-# download all files
-download_urls(urlpath, basepath)
-
+# protect the entry point
+if __name__ == '__main__':
+	# website page containing links to files
+	urlpath = 'https://...'
+	# local path where we will save the files
+	basepath = '...'
+	# download all files
+	download_urls(urlpath, basepath)
 

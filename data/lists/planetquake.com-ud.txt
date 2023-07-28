@@ -1,0 +1,9 @@
+http://planetquake.com/ud/banner.jpg
+http://www.planetquake.com/ud/TFmatch.jpg
+http://www.planetquake.com/ud/pldocs.txt
+http://www.planetquake.com/ud/s01.jpg
+http://www.planetquake.com/ud/s02.jpg
+http://www.planetquake.com/ud/s03.jpg
+http://www.planetquake.com/ud/s04.jpg
+http://www.planetquake.com/ud/trolls.htm
+http://www.planetquake.com/ud/wc-02.gif

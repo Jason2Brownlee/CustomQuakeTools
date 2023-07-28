@@ -1,0 +1,7 @@
+http://ftp.icm.edu.pl/pub/coast/games/idsoftware/dirlist.txt
+http://ftp.icm.edu.pl/pub/coast/games/idsoftware/doom/
+http://ftp.icm.edu.pl/pub/coast/games/idsoftware/doom/00_index.txt
+http://ftp.icm.edu.pl/pub/coast/games/idsoftware/idsoftware.idx
+http://ftp.icm.edu.pl/pub/coast/games/idsoftware/quake/
+http://ftp.icm.edu.pl/pub/coast/games/idsoftware/quake/qtest1.zip
+http://ftp.icm.edu.pl/pub/coast/games/idsoftware/quake/quakepix.zip

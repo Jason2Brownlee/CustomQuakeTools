@@ -1,0 +1,14 @@
+http://ftp.intercity.dk/
+http://ftp.intercity.dk/dk/adresse.htm
+http://ftp.intercity.dk/dk/biografi.htm
+http://ftp.intercity.dk/dk/gallerier.htm
+http://ftp.intercity.dk/dk/homepage.htm
+http://ftp.intercity.dk/dk/introduktion.htm
+http://ftp.intercity.dk/dk/kalender.htm
+http://ftp.intercity.dk/dk/menu.htm
+http://ftp.intercity.dk/dk/menu_00.htm
+http://ftp.intercity.dk/dk/nyheder.htm
+http://ftp.intercity.dk/dk/sprogvalg.htm
+http://ftp.intercity.dk/dk/top.htm
+http://ftp.intercity.dk/phpMyAdmin/index.php
+http://ftp.intercity.dk/phpPgAdmin/index.php
