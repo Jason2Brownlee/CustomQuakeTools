@@ -2,6 +2,18 @@
 
 A collection of custom scripts for working with Quake assets.
 
+Used in the **Quake Buffet** project at http://QuakeBuffet.com and in the **Quake Bot Archive** project at http://QuakeBotArchive.com
+
+## Install
+
+Assumes Python 3.10+ is installed.
+
+1. Download code
+	`git clone git@github.com:Jason2Brownlee/CustomQuakeTools.git`
+2. Install requirements
+	`pip3 install -r requirements.txt`
+3. Run scripts...
+
 ## Features
 
 * Script to list all BSP files in a Quake mod (i.e. maps/ and PAK files).
