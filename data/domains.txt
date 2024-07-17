@@ -1170,6 +1170,7 @@ ozemail.com.au/~kubikh
 plendl.iwarp.com/quake
 
 gibworld.com/keldon
+gibworld.com
 quakeport.com
 
 zemp.free.Fr
@@ -1244,6 +1245,31 @@ deathsdoor.com/qip
 grc.quake2.com/qip
 ftp.egoshooters.com
 
+quake.morda.ru
+backblast.com
+qwplayers.org
+qwtf.org
+biscuitservers.net
+quake.alvis.ru
 
+quake.orc.ru
+zone.ru
+ogl.spb.ru
+tf.spb.ru
+ftp.zone.ru
+c4denn.chat.ru
+ss-club.holm.ru
+dailytelefrag.com
+files.dailytelefrag.com
+quake.odessa.net
+kolt-sqw.narod.ru
+quake.crimea.ua
+wsb.poznan.pl/~pawel
+150.254.194.2/~pawel/
+q1a.rax.ru
+quake.cz
+files.cyberfight.ru
 
+quakebot.net
+nygmafiles.essentrix.net
 

@@ -223,6 +223,6 @@ def print_bsp_list(mod_path, sep='\t', report_author=True):
 # protect the entry point
 if __name__ == '__main__':
     # path to mod directory
-    path = '...'
+    path = '/Users/jasonb/Games/QuakeYouTube/bv'
     # report all maps in mod directory
     print_bsp_list(path, '\t', True)

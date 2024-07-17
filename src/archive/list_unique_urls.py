@@ -105,7 +105,7 @@ def report_urls(urls, ext_filters=[]):
 # protect the entry point
 if __name__ == '__main__':
 	# website to query, does not need https:// prefix
-	query = '...'
+	query = 'http://www.it.swin.edu.au/personal/jbrownlee/'
 	# perform query (the slow part...)
 	urls = get_unique_urls(query)
 	# define a filter on urls to report, e.g. all .zip or all .txt

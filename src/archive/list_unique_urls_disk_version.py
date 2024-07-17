@@ -109,7 +109,7 @@ def main(basepath):
 # protect the entry point
 if __name__ == '__main__':
     # path to website
-    path = '...'
+    path = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/fuhquake.net-forum'
     # report all unique urls
     main(path)
 

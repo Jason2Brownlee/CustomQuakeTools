@@ -7,6 +7,8 @@ from urllib.parse import quote
 import os
 import os.path
 
+THREADS = 5
+
 # download a url as blob of data
 def download_url(urlpath):
 	try:
@@ -85,9 +87,10 @@ def filter_results(url_list):
 			continue
 		# skip stuff too old
 # HACK
-		year = int(str(timestamp)[:4])
-		if year > 2002:
-			continue
+		# year = int(str(timestamp)[:4])
+		# if year > 2002:
+		# 	continue
+
 		# remove port if present
 		if ':80' in url:
 			url = url.replace(':80', '')
@@ -167,7 +170,8 @@ def download_urls(url_map, basepath):
 	# create output directory
 	os.makedirs(basepath, exist_ok=True)
 	# create thread pool
-	with ThreadPool(20) as pool:
+	print(f'Using {THREADS} threads')
+	with ThreadPool(THREADS) as pool:
 		# issue all urls as tasks
 		for url, timestamps in url_map.items():
 			# issue to the pool
@@ -179,10 +183,10 @@ def download_urls(url_map, basepath):
 
 # protect the entry point
 if __name__ == '__main__':
-	# url domain and path to download (no https:// prefox)
-	query = '...'
+	# url domain and path to download (no https:// prefix)
+	query = 'fuhquake.net/forum'
 	# dir where files will be saved
-	outpath = '...'
+	outpath = '/Users/jasonb/Development/Quake/CustomQuakeTools/dev/fuhquake.net-forum'
 	# get map of urls to timestamps
 	url_map = get_unique_urls(query)
 	# download the unique files

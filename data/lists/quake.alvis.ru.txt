@@ -1,0 +1,7 @@
+http://quake.alvis.ru/skyboxes/
+http://quake.alvis.ru/skyboxes/index.shtml?2
+http://quake.alvis.ru/tf2003/
+http://quake.alvis.ru/tf2003/index.shtml?archive4
+http://quake.alvis.ru/tf2003/readme.txt
+http://quake.alvis.ru/tf2003/versions-qvm.txt
+http://quake.alvis.ru/tf2003/versions-qvm_en.txt
